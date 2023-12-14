@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ronnie Denzel">
+        <meta name="description" content="a test on number convertion">
+
+        <link rel="stylesheet" href="./numberConverter.css">
+        <title>Number Converter</title>
+    </head>
+
+    <body>
+        <div id="root">
+            <div class="answer-popup">
+                <p class="answer-popup-message">Here is the answer</p>
+                <button class="answer-popup__close-button">X</button>
+            </div>
+
+            <div class="error-popup">
+                <p class="error-popup-message">Here is the error</p>
+                <button class="error-popup__close-button">X</button>
+            </div>
+
+            <div class="form-container">
+                <h1 class="form-container__title">Number conversion</h1>
+                
+                <div class="form-container__before-grid">
+                    <p class="form-container__before-grid--description">What base would you like to convert from</p>
+
+                    <div class="form-container__before-grid--buttons">
+                        <button class="before-grid--buttons" name="Binary">Binary</button>
+                        <button class="before-grid--buttons" name="Decimal">Decimal</button>
+                        <button class="before-grid--buttons" name="Octal">Octal</button>
+                        <button class="before-grid--buttons" name="Hexadecimal">Hexadecimal</button>
+                    </div>
+                </div>
+
+                <div class="form-container__after-grid">
+                    <p class="form-container__after-grid--description">What base would you like to convert to</p>
+
+                    <div class="form-container__after-grid--buttons">
+                        <button class="active-grid--buttons" name="Binary">Binary</button>
+                        <button class="active-grid--buttons" name="Decimal">Decimal</button>
+                        <button class="active-grid--buttons" name="Octal">Octal</button>
+                        <button class="active-grid--buttons" name="Hexadecimal">Hexadecimal</button>
+                    </div>
+                </div>
+
+                <div class="form-container__form">
+                    <div class="form-container__form--input-area">
+                        <input 
+                            type="text" 
+                            placeholder="place your number here"
+                            required
+                            name="number"
+                        />
+
+                        <button class="form--input-area--button">Convert</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./numberConverter.js"></script>
+    </body>
+</html>

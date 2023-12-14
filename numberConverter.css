@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: skyblue;
+    min-height: 100vh;
+    width: 100%;
+    transition: all 500ms ease-in-out;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.answer-popup{
+    position: absolute;
+    transition: all 500ms ease-in-out;
+    top: 20px;
+    background-color: lightgreen;
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    display: none;
+    justify-content: space-between;
+    color: black;
+    box-shadow: 0px 0px 10px black;
+    animation: answer-popup-appearance 1.5s ease-in-out 0.5ms 1 forwards;
+    text-align: center;
+}
+
+.answer-popup__close-button{
+    background-color: red;
+    border: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+    transition: all 500ms ease-in-out;
+}
+
+.answer-popup__close-button--active{
+    background-color: white;
+    color: black;
+}
+
+.error-popup{
+    position: absolute;
+    transition: all 500ms ease-in-out;
+    top: 20px;
+    background-color: red;
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    display: none;
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px black;
+    animation: answer-popup-appearance 1.5s ease-in-out 0.5ms 1 forwards;
+    text-align: center;
+}
+
+.error-popup__close-button{
+    background-color: yellow;
+    border: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+    transition: all 500ms ease-in-out;
+}
+
+.error-popup__close-button--active{
+    background-color: white;
+    color: red;
+}
+
+.form-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    min-width: 50%;
+    min-height: 80vh;
+    background-color: teal;
+    border-radius: 10px;
+    margin-top: 50px;
+    color: white;
+}
+
+.form-container__title{
+    font-size: 1.5rem;
+    color: greenyellow;
+    font-weight: 800;
+}
+
+.form-container__before-grid,
+.form-container__after-grid{
+    width: 95%;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.form-container__before-grid--description,
+.form-container__after-grid--description{
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.form-container__before-grid--buttons,
+.form-container__after-grid--buttons{ 
+    padding: 0 20px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 5px;
+}
+
+.form-container__before-grid--buttons button,
+.form-container__after-grid--buttons button{
+    border: none;
+    background-color: peru;
+    padding: 20px;
+    width: auto;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    box-shadow: 0px 0px 2px black;
+}
+
+.before-grid--buttons--active,
+.after-grid--buttons--active{
+    background-color: silver;
+    color: white;
+    transform: scale(0.9);
+}
+
+.form-container__form{
+    width: 95%;
+    background-color: blueviolet;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.form-container__form--input-area{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-container__form--input-area input{
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 10px;
+    width: 70%;
+}
+
+.form-container__form--input-area button{
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    background-color: yellow;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    box-shadow: 0px 0px 5px black;
+}
+
+.form--input-area--button--active{
+    background-color: white;
+    color: yellow;
+    transform: scale(0.8);
+}
+
+/* ALL ANIMATIONS */
+@keyframes answer-popup-appearance {
+    0%{
+        transform: translateY(-200%);
+    }
+
+    50%{
+        transform: translateY(50%);
+    }
+    
+    100%{
+        transform: translateY(-10%);
+        scale: 1;
+    }
+}
