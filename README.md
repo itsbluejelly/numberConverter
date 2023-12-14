@@ -11,9 +11,10 @@ Overall, it helped me handle some remind myself on some logic, and hopefully you
 ## Table of contents
 
 1. [__Description__](#number-converter)
-1. [__Updates and release notes__](#updates-and-release-notes)
-1. [__Code review__](#code-review)
-1. [__Credits__](#credits)
+2. [__Updates and release notes__](#updates-and-release-notes)
+3. [__Code review__](#code-review)
+4. [__Project set up__](#project-set-up)
+5. [__Credits__](#credits)
 
 ## Updates and release notes
 
